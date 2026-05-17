@@ -1,0 +1,185 @@
+@font-face {
+    font-family: "Kajiro";
+    src: url("../fonts/Kajiro-Bold.ttf") format("truetype");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative;
+}
+
+#main{
+    width: 100%;
+    height: 100vh;
+     position: relative; /* ← ADD */
+    overflow: hidden;
+    
+   
+}
+
+#back{
+    width: 100%;
+    min-height: 100vh; /* ← CHANGE from height */
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    pointer-events: all;
+
+}
+
+#back img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    object-fit: cover;
+    z-index: 2;
+    pointer-events: none;
+}
+
+#back img:first-child {
+    opacity: 1; /* ← Show first image */
+}
+
+#back canvas {
+    z-index: 1 !important; /* Canvas below images */
+}
+
+
+#top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    pointer-events: none;
+  
+}
+
+#workingarea{
+    margin: 0 auto;
+    width: 80%;
+    height: 100vh;
+    max-width: 1920px;
+    position: relative;
+    border: 1px solid red;
+
+}
+
+.nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+
+.nav img{
+    height: 60px;
+}
+
+#nleft, #nright{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600 ;
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    pointer-events: all;
+}
+
+
+#hero{
+    width: 100%;
+     height: calc(100vh - 120px);
+    display: flex;
+    justify-content: space-between;
+ /*  position: absolute; */
+    top: 10%;
+    left: 0;
+    align-items: center; /* ← THIS centers the content */
+    position: relative;
+  /*  transform: translate(0, -50%); */
+  
+}
+
+#heroleft{
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+ 
+}
+
+#heroleft .elem h1:not(:first-child) {
+    display: none; 
+}
+
+#heroleft  .elem h1{
+    line-height: .85;
+    font-family: "Kajiro";
+    color: #fff;
+    font-weight: 100;
+    font-size: 9vw;
+    margin: 0;           
+    padding: 0; 
+}
+
+#heroleft  .elem{
+    height: auto;
+    margin: 0;           
+    padding: 0; 
+}
+
+#heroleft  button{
+    pointer-events: all;
+    padding: 1vw 4vw;
+    font-size: 2.6vw;
+    margin-top: 1vw;
+    font-family: "Kajiro";
+}
+
+#heroright{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: #fff;
+  
+}
+
+#heroright{
+    font-size: 14px;
+    font-weight: 300px;
+    text-align: right;
+
+}
+
+#heroright #imagediv{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    height: 150px;
+    background-image: url("../assets/imgi_11_dae15c0a-8f58-4dc3-86ff-43832f0d0541.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 2px;
+}
+
+
+
