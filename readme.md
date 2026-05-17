@@ -1,6 +1,6 @@
-A modern reimagination of the Ray-Ban landing page focused on bold visual storytelling, luxury-fashion aesthetics, and immersive frontend design.
+A modern reimagination of the Ray-Ban landing page focused on bold visual storytelling, luxury-fashion aesthetics, and immersive frontend design.This project was built as a frontend design exploration to recreate the premium feel of high-end eyewear campaigns while adding my own artistic direction and layout decisions.
+ㅤㅤㅤㅤㅤ
 
-This project was built as a frontend design exploration to recreate the premium feel of high-end eyewear campaigns while adding my own artistic direction and layout decisions.
 
 ㅤㅤㅤㅤㅤ
 ### Design Philospohy 
@@ -12,15 +12,10 @@ The design emphasizes strong visual hierarchy, oversized editorial typography, i
 This project also served as an exploration of branding consistency, frontend creativity, and modern interaction-focused web design principles.
 ㅤㅤㅤㅤㅤ
 
-### Some Future Improvements
-
-Future Improvements : Smooth scroll animations, GSAP / Framer Motion integration, Interactive hover effects, Better mobile responsiveness and Performance optimization
-
-
- 
-
 
 ㅤㅤㅤㅤㅤ
+
+<img width="1919" height="871" alt="Screenshot (174)" src="https://github.com/user-attachments/assets/41536124-ad6c-46be-93c6-fc6c56579e6c" />
 
 <div align="center">
 
@@ -29,6 +24,10 @@ Future Improvements : Smooth scroll animations, GSAP / Framer Motion integration
 </a>
 
 </div>
+ㅤㅤㅤㅤㅤ
+ㅤㅤㅤㅤㅤ
 
-ㅤㅤㅤㅤㅤ 
+
+Future Improvements : Smooth scroll animations, GSAP / Framer Motion integration, Interactive hover effects, Better mobile responsiveness and Performance optimization.
+
 All original brand assets and trademarks belong to their respective owners.
