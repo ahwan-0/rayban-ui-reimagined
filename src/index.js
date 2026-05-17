@@ -20,7 +20,84 @@ Shery.imageEffect("#back", {style:5, config :
 });
 */
 
-let currentImageIndex = 0;
+function isDesktop() {
+
+    const userAgent = navigator.userAgent.toLowerCase();
+    const mobileKeywords = ['android', 'webos', 'iphone', 'ipad', 'ipod', 'blackberry', 'windows phone', 'mobile'];
+    const isMobileUA = mobileKeywords.some(keyword => userAgent.includes(keyword));
+
+    const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+
+    const width = window.innerWidth;
+    const isTooSmall = width < 1024; // Minimum laptop size
+
+    const isPortrait = window.matchMedia("(orientation: portrait)").matches && width < 1024;
+    
+    console.log('Device Check:', {
+        userAgent: userAgent,
+        isMobile: isMobileUA,
+        isTouch: isTouchDevice,
+        width: width,
+        isPortrait: isPortrait
+    });
+
+    if (isMobileUA || isTouchDevice || isTooSmall || isPortrait) {
+        return false;
+    }
+    
+    return true;
+}
+
+function blockAccess() {
+    console.error(' ACCESS DENIED: This website is desktop-only.');
+    
+
+    const overlay = document.getElementById('device-block');
+    if (overlay) {
+        overlay.style.display = 'flex';
+    }
+    
+    // Hide all content
+    const main = document.getElementById('main');
+    if (main) {
+        main.style.display = 'none';
+    }
+
+    document.body.style.overflow = 'hidden';
+    document.body.style.pointerEvents = 'none';
+}
+
+function allowAccess() {
+    console.log(' ACCESS GRANTED: Desktop device detected.');
+    
+    const overlay = document.getElementById('device-block');
+    if (overlay) {
+        overlay.style.display = 'none';
+    }
+    
+    const main = document.getElementById('main');
+    if (main) {
+        main.style.display = 'block';
+    }
+}
+
+(function() {
+    if (!isDesktop()) {
+        blockAccess();
+    } else {
+        allowAccess();
+    }
+})();
+
+
+window.addEventListener('resize', function() {
+    if (!isDesktop()) {
+        blockAccess();
+    }
+});
+
+if (isDesktop()) {
+    let currentImageIndex = 0;
 
 Shery.imageEffect("#back", {
     style: 5,
@@ -57,6 +134,10 @@ Shery.imageEffect("#back", {
     },
     gooey: true
 });
+
+    
+}
+
 
 
 
